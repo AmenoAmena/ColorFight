@@ -1,5 +1,6 @@
 import pygame
 import random
+from sys import exit
 
 class Fighter:
     def __init__(self, color):
@@ -177,6 +178,8 @@ class Game:
             self.finish_game(23)
         elif event.key == pygame.K_SPACE:
             self.restart()
+        elif event.key == pygame.K_ESCAPE:
+            exit()
 
     def finish_game(self, color_index):
         self.game_finished = True
